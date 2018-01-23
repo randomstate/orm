@@ -2,7 +2,7 @@
   "name": "randomstate/orm",
   "description": "Laravel-Doctrine Integration with Custom Repositories",
   "type": "library",
-  "license": "All rights reserved.",
+  "license": "MIT",
   "authors": [
     {
       "name": "Connor Imrie",
