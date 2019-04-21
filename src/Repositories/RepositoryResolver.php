@@ -4,7 +4,7 @@
 namespace RandomState\Orm\Repositories;
 
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 class RepositoryResolver
 {
@@ -34,7 +34,7 @@ class RepositoryResolver
 		$this->factory = $closure;
 	}
 
-	public function getRepository(EntityManager $entityManager)
+	public function getRepository(EntityManagerInterface $entityManager)
 	{
 		$managerName = spl_object_hash($entityManager);
 		if (!isset($this->repositories[$managerName])) {

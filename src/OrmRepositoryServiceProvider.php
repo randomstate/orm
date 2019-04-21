@@ -4,11 +4,11 @@
 namespace RandomState\Orm;
 
 
+use Doctrine\ORM\EntityManagerInterface;
 use RandomState\Orm\Laravel\Traits\Config;
 use RandomState\Orm\Repositories\RepositoryMappingProvider;
 use RandomState\Orm\Repositories\RepositoryResolverRegistry;
 use RandomState\Orm\Repositories\ResolverCallbacks;
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Repository\RepositoryFactory;
 use Illuminate\Container\Container;
 use Illuminate\Support\ServiceProvider;
@@ -56,7 +56,7 @@ class OrmRepositoryServiceProvider extends ServiceProvider
 			$this->app->singleton($repository, function(Container$app) use($entity) {
 				/** @var RepositoryFactory $factory */
 				$factory = $app->make(RepositoryFactory::class);
-				return $factory->getRepository($app->make(EntityManager::class), $entity);
+				return $factory->getRepository($app->make(EntityManagerInterface::class), $entity);
 			});
 		}
 	}
