@@ -4,6 +4,8 @@
 namespace RandomState\Orm\Laravel\Traits;
 
 
+use Illuminate\Support\Arr;
+
 trait Config
 {
 	/**
@@ -25,7 +27,7 @@ trait Config
 	{
 		$config = $this->app->make('config')->all();
 		if ($key) {
-			$config = array_get($config, $key, $default);
+			$config = Arr::get($config, $key, $default);
 		}
 		return $config;
 	}
