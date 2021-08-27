@@ -4,9 +4,9 @@
 namespace RandomState\Orm\Repositories;
 
 
-use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\UnitOfWork;
+use Doctrine\ORM\Mapping\ClassMetadata;
 
 trait ResolverCallbacks
 {
