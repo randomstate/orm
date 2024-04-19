@@ -34,7 +34,7 @@ class RepositoryResolverRegistry implements RepositoryFactory
 	 * @param string $entityName
 	 * @return \Doctrine\Common\Persistence\ObjectRepository
 	 */
-	public function getRepository(EntityManagerInterface $entityManager, $entityName)
+	public function getRepository(EntityManagerInterface $entityManager, $entityName): \Doctrine\ORM\EntityRepository
 	{
 		if (!isset($this->resolvers[$entityName])) {
 			return (new DefaultRepositoryFactory())->getRepository($entityManager, $entityName);
