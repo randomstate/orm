@@ -22,13 +22,11 @@
   },
   "require": {
     "laravel-doctrine/orm": "^2.0",
-    "laravel-doctrine/extensions": "^1",
-    "laravel-doctrine/fluent": "^1.2.0",
     "beberlei/doctrineextensions": "^v1.3.0",
     "gedmo/doctrine-extensions": "^3.0.x-dev"
   },
   "require-dev": {
-    "laravel/laravel": "^10.0",
-    "phpunit/phpunit": "^9.0"
+    "laravel/laravel": "^11.0",
+    "phpunit/phpunit": "^11.0"
   }
 }
